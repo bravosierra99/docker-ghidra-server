@@ -31,7 +31,8 @@ Start the server and connect to port 13100 with a Ghidra client that has a **mat
 ```bash
 docker run -it --rm \
     --name ghidra-server \
-    -e GHIDRA_USERS="admin bytehow" \
+    -e GHIDRA_ADMINS="admin" \
+    -e GHIDRA_USERS="bytehow" \
     -v /path/to/repos:/repos \
     -p 13100-13102:13100-13102 \
     bytehow/ghidra-server
@@ -42,7 +43,8 @@ docker run -it --rm \
 ```bash
 docker run -it --rm \
     --name ghidra-server \
-    -e GHIDRA_USERS="admin bytehow" \
+    -e GHIDRA_ADMINS="admin " \
+    -e GHIDRA_USERS="bytehow" \
     -e GHIDRA_PUBLIC_HOSTNAME="0.0.0.0" \
     -v /path/to/repos:/repos \
     -p 13100-13102:13100-13102 \
